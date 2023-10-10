@@ -7,7 +7,9 @@ from s02_chambai import chambai
 
 #region testkey_list
 testcase_list = [
-  #TODO
+  {'tc_name': 'tc0', 'input': {'name':'Mom'}, 'output':'Hi Mom!'},
+  {'tc_name': 'tc1', 'input': {},             'output':'Hi!'},
+  {'tc_name': 'tc2', 'input': {'name':None},  'output':'Hi!'},
 ]
 #endregion testkey_list
 
