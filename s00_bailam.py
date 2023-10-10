@@ -52,8 +52,9 @@ if __name__=='__main__':
   print( hi()      )  # Hi!
   print( hi(None)  )  # Hi!
 
-  print( hi('Mom', 'Dad') )    # Hi Mom, and Dad!
-  print( hi('A', 'B', 'C')  )  # Hi A, B, and C!
+  print( hi('Mom', 'Dad') )                # Hi Mom, and Dad!
+  print( hi('A', 'B', 'C')  )              # Hi A, B, and C!
+  print( hi('1', '22', '333', '4444')   )  # Hi A, B, and C!
 
   # print( hi(name='Mom')   )  # Hi Mom!
 
