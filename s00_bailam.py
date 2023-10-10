@@ -23,7 +23,7 @@ hi('Mom')             | Hi Mom!
 hi()                  | Hi!
 hi(None)              | Hi!
 
------------- mucdo: kho) ----------------
+------------ mucdo: kho ----------------
 hi('Mom', 'Dad')      | Hi Mom, and Dad!
 hi(1, 2, 3)           | Hi 1,2, and 3!
 """
