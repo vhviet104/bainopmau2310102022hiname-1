@@ -32,15 +32,27 @@ hi('1', '22', '333', '4444') | Hi A, B, and C!
 #endregion debai
 
 #region bailam
-def hi(*args):
+#             **kwargs to allow calling hi(name='xx') without error > TypeError: hi() got an unexpected keyword argument 'name'
+def hi(*args, **kwargs):
   if len(args)==0:  # hi()  --> args = (,)
-    return 'Hi!'
+    if not kwargs:
+      return 'Hi!'
+    else:
+      name = kwargs.get('name')
+      if name:
+        return f'Hi {name}!'
+      else:
+        return 'Hi!'
+
   if len(args)==1 and args[0] is None:  # hi(None)  --> args = (None,)
     return 'Hi!'
 
-  if len(args)==1:  # hi('Mom')
+  if len(args)==1:  # hi('Mom') hi('')
     name = args[0]
-    return f'Hi {name}!'
+    if name:
+      return f'Hi {name}!'
+    else:
+      return 'Hi!'
 
   if len(args)>1:  # hi('Mom', 'Dad')
     namestr = ', '.join(args[0:-1])
@@ -56,6 +68,6 @@ if __name__=='__main__':
   print( hi('A', 'B', 'C')  )              # Hi A, B, and C!
   print( hi('1', '22', '333', '4444')   )  # Hi A, B, and C!
 
-  # print( hi(name='Mom')   )  # Hi Mom!
+  print( hi(name='Mom')   )  # Hi Mom!
 
 #endregion bailam
