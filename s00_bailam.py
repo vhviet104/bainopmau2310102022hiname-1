@@ -22,7 +22,7 @@ Khi chay voi input    | Ketqua output
 hi('Mom', 'f')        | Hi Ms Mom!
 hi('Dad', 'm')        | Hi Mr Dad!
 hi('AI-BTX', None)    | Hi AI-BTX!
-hi(None, None)        | Hi AI-BTX!
+hi(None, None)        | Hi!
 """
 #endregion debai
 
