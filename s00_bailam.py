@@ -17,15 +17,16 @@ hi(name)
 Hay viet ham hi(name) xuat ra cau chao theo mota benduoi
 
 --- vidu mau / testcase
-Khi chay voi input    | Ketqua output
---------------------- | --------------
-hi('Mom')             | Hi Mom!
-hi()                  | Hi!
-hi(None)              | Hi!
+Khi chay voi input           | Ketqua output
+---------------------------- | -----------------
+hi('Mom')                    | Hi Mom!
+hi()                         | Hi!
+hi(None)                     | Hi!
 
------------- mucdo: kho ----------------
-hi('Mom', 'Dad')      | Hi Mom, and Dad!
-hi(1, 2, 3)           | Hi 1,2, and 3!
+------------------- mucdo: kho -----------------
+hi('Mom', 'Dad')             | Hi Mom, and Dad!
+hi('A', 'B', 'C')            | Hi A, B, and C!
+hi('1', '22', '333', '4444') | Hi A, B, and C!
 """
 #endregion debai
 
