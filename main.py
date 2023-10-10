@@ -8,6 +8,7 @@ from s02_chambai import chambai
 #region testkey_list
 testcase_list = [
   {'tc_name': 'tc0', 'input': {'name':'Mom'}, 'output':'Hi Mom!'},
+  {'tc_name': 'tc0', 'input': {'name':''},    'output':'Hi!'},
   {'tc_name': 'tc1', 'input': {},             'output':'Hi!'},
   {'tc_name': 'tc2', 'input': {'name':None},  'output':'Hi!'},
 

@@ -19,10 +19,11 @@ Hay viet ham hi(name) xuat ra cau chao theo mota benduoi
 --- vidu mau / testcase
 Khi chay voi input           | Ketqua output
 ---------------------------- | -----------------
+hi(name='Mom')               | Hi Mom!
 hi('Mom')                    | Hi Mom!
+hi('')                       | Hi!
 hi()                         | Hi!
 hi(None)                     | Hi!
-hi(name='Mom')               | Hi Mom!
 
 ------------------- mucdo: kho -----------------
 hi('Mom', 'Dad')             | Hi Mom, and Dad!
