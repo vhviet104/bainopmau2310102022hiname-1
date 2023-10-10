@@ -22,6 +22,7 @@ Khi chay voi input           | Ketqua output
 hi('Mom')                    | Hi Mom!
 hi()                         | Hi!
 hi(None)                     | Hi!
+hi(name='Mom')               | Hi Mom!
 
 ------------------- mucdo: kho -----------------
 hi('Mom', 'Dad')             | Hi Mom, and Dad!
@@ -31,9 +32,29 @@ hi('1', '22', '333', '4444') | Hi A, B, and C!
 #endregion debai
 
 #region bailam
-def hi(name):
-  return 'todo'
+def hi(*args):
+  if len(args)==0:  # hi()  --> args = (,)
+    return 'Hi!'
+  if len(args)==1 and args[0] is None:  # hi(None)  --> args = (None,)
+    return 'Hi!'
 
-# def hi(args, kwargs):
-#   return 'todo'
+  if len(args)==1:  # hi('Mom')
+    name = args[0]
+    return f'Hi {name}!'
+
+  if len(args)>1:  # hi('Mom', 'Dad')
+    namestr = ', '.join(args[0:-1])
+    namestr = f'{namestr}, and {args[-1]}'
+    return f"Hi {namestr}!"
+
+if __name__=='__main__':
+  print( hi('Mom') )  # Hi Mom!
+  print( hi()      )  # Hi!
+  print( hi(None)  )  # Hi!
+
+  print( hi('Mom', 'Dad') )    # Hi Mom, and Dad!
+  print( hi('A', 'B', 'C')  )  # Hi A, B, and C!
+
+  # print( hi(name='Mom')   )  # Hi Mom!
+
 #endregion bailam
