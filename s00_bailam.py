@@ -31,6 +31,37 @@ hi('1', '22', '333', '4444') | Hi A, B, and C!
 #endregion debai
 
 #region bailam
-def hi(name):
-  return 'todo'
+def hi(*args, **kwargs):
+  if not args:
+    if not kwargs:  # hi()
+      return 'Hi!'
+
+    #region handle hi(name='Mom')
+    else:  # hi(name='Mom')
+      name = kwargs.get('name')
+      if name:
+        return f'Hi {name}!'
+      else:
+        return f'Hi!'
+    #endregion handle hi(name='Mom')
+
+  if len(args)>1:
+    namestr = ', '.join(args[0:-1])
+    namestr = f'{namestr}, and {args[-1]}'
+    return   f"Hi {namestr}!"
+  elif len(args)==1:
+    name = args[0]
+    if name:
+      return f'Hi {name}!'
+    else:
+      return f'Hi!'
+
+if __name__=='__main__':
+  print( hi('Mom') )
+  print( hi(name='Mom') )
+  print( hi('A', 'B', 'C') )
+  '''
+  Hi A,B, and C!
+  Hi A, B, and C!
+  '''
 #endregion bailam
