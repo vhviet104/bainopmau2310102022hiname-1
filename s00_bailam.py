@@ -27,6 +27,6 @@ hi(None, None)        | Hi!
 #endregion debai
 
 #region bailam
-def sumtwoint(i1, i2):
+def hi(name,gender):
   return 'todo'
 #endregion bailam
